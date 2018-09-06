@@ -1,0 +1,12 @@
+#logo{
+			background-color: red;
+			font-weight: bolder;
+		}
+		.item{
+			background-color: #ccc;
+			font-style: italic;
+		}
+
+#header{
+	background-color: yellow;
+}

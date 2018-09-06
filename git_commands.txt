@@ -1,0 +1,12 @@
+To Clone repo in your Machine
+
+	> git clone gitLink - for very First Time.
+	> git pull - for Daily Updates.
+
+To Upload files in your Repository
+	> git add . - to add all Files.
+	> git status - to Check which files you are uploading.
+	> git commit -m 'message'  --> to commit your changes.
+	> git push - to push your files into repo, Here you need to enter your github credentials
+	
+
