@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;	
+		}
+
+		#header{
+			height: 50px;
+			background-color: #888;
+			color: white;
+		}
+		#logo{
+			float: left;
+			width: 200px;
+			padding: 10px 10px 0px 10px;
+		}
+		#menu{
+			float: right;
+			width: 400px;
+			/*background-color: blue;*/
+		}
+		.item{
+			display: inline-block;
+			padding: 15px;
+			/*background-color: white;*/
+		}
+
+		#section{
+			width: 100%;
+		}
+
+		#box1{
+			float: left;
+			width: 50%;
+			background-color: #ccc;
+			height: 50px;
+			margin-left: 0px;
+			
+		}
+		#box2{
+			float: right;
+			width: 50%;
+			margin-left: 0px;
+			background-color: lime;
+			height: 50px;
+		
+		}
+		#content{
+
+		}
+		#content li{
+			float: left;
+			width: 30%;
+			height: 250px;
+			background-color: #ccc;
+			margin-left: 30px;
+			margin-top: 10px;
+
+		list-style-type: none;
+
+		}
+
+
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<h1>MY LOGO</h1>
+		</div>
+		<div id="menu">
+			<div class="item">
+				HOME 
+			</div>
+			<div class="item">
+				ABOUT 
+			</div>
+			<div class="item">
+				GALLERY 
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="section">
+		<div id="box1">
+			Text
+		</div>
+		<div id="box2">
+			Text
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<ul id="content">
+		<li>
+			BOX 1
+		</li>
+		<li>
+			BOX 2
+		</li>
+		<li>
+			BOX 3
+		</li>
+		<div class="clearfix"></div>
+	</ul>
+</body>
+</html>
