@@ -1,0 +1,107 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#main{
+	width: 75%;
+	margin: auto;
+}
+
+
+/* Header CSS  starts */
+#header{
+	padding: 25px;
+}
+#logo{
+	float: left;
+	width: 30%;
+}
+#menu{
+	float: left;
+	width: 70%;
+}
+#menu ul{
+	float: right;
+}
+#menu ul li{
+	display: inline-block;
+	width: 100px;
+	background-color: #ccc;
+	line-height: 50px;
+	text-align: center;
+}
+#menu ul li a{
+	text-decoration: none;
+	color: #000;
+}
+/* Header CSS  Ends */
+
+
+#baner{
+	padding: 25px;
+	background-color: #1a97d0;
+	color: #fff;
+}
+#baner p{
+	line-height: 25px;
+}
+
+
+#contentSec{
+	padding: 25px;
+}
+#contentSec ul.one{
+	margin-bottom: 50px;
+}
+#contentSec ul.one li{
+	width: 30%;
+	display: inline-block;
+	margin-right: 27px;
+	text-align: justify;
+	line-height: 20px;
+}
+#contentSec li h2{
+	padding: 10px 0px;
+}
+
+#contentSec ul.two{
+	margin-bottom: 25px;
+}
+#contentSec ul.two li{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+#contentSec ul.two li.w60{
+	width: 60%;
+	margin-right: 54px;
+}
+#footer{
+	padding: 25px;	
+	background-color: #ccc;
+	color: #fff;
+	font-size: 14px;
+}
+
+.footerLeft {
+	float: left;
+}
+.footerLeft li{
+	display: inline-block;
+	margin-left: 10px;
+}
+.footerLeft li a{
+	text-decoration: none;
+	color: #fff;
+}
+#copy{
+	float: right;
+}
+
+
+.clearfix{
+	clear: both;
+}
