@@ -1,0 +1,90 @@
+		*{
+			margin: 0px;
+			padding: 0px;
+			
+			font-family: 'Raleway', sans-serif;
+			/* font-family: 'Oswald', sans-serif; */
+		}
+		#main{
+			height: 900px;
+			background-image: url(../images/bg.jpg);
+			background-repeat: no-repeat;
+			background-position: bottom;
+			background-attachment: fixed;
+			/*background-color: red;*/
+
+			/* css 3 */
+			background-size:cover;
+
+			color: #fff;
+			/*padding-top: 100px;*/
+			box-sizing: border-box;
+
+		}
+		#note{
+			padding-top: 100px;
+			width: 500px;
+			margin: auto;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		p.text-center{
+			text-align: center;
+		}
+		.text-jut{
+			width: 300px;
+			border: 1px solid;
+			padding: 10px;
+			text-align: justify;
+		}
+
+#header{
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+#logo{
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+.menu{
+	float: left;
+	width: 900px;
+}
+.listWrap{
+	float: right;
+	/*width: 50%;*/
+	list-style-type: none;
+}
+.listWrap li{
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+	line-height: 40px;
+	color: #fff;
+}
+.listWrap li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.demo_para{
+	width: 500px;
+	margin: auto;
+	line-height: 2.5;
+	text-align: justify;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif; 
+	text-transform: lowercase;
+	font-style: italic;
+	text-indent: 100px;
+	word-spacing:5px;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 3px black;
+
+}
+.clearfix{
+	clear: both;
+}
