@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			border:1px solid;
+		}
+		#static{
+			position: static;
+			left: 100px;
+		}
+		#relative{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			left: 100px;
+			top: 100px;
+			background-color: lime;
+			z-index: 111;
+		}
+		#absolute{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			background-color: yellow;
+		}
+		#fixed{
+			position: fixed;
+			top: 0px;
+			left: 300px;
+			z-index: -111;
+			background-color: red
+		}
+
+	</style>
+</head>
+<body>
+	<div id="static">
+		STATIC
+	</div>
+	<div id="relative">
+		<!-- relative -->
+		<div id="absolute">
+			absolute
+		</div>
+	</div>
+	
+	<div id="fixed">
+		fixed
+	</div>
+	<div style="height: 600px;">
+		
+	</div>
+</body>
+</html>
