@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#main{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background: linear-gradient( 45deg, red,blue); 
+			transition: 1s;
+			/*opacity: 0;*/
+			/*visibility: hidden;*/
+			display: none;
+		}
+		#main:hover{
+			margin-left: 400px;
+			border-radius: 0;
+			background: linear-gradient( 45deg, green,crimson);
+		}
+
+		button{
+			background-color: lime;
+			padding: 10px;
+			outline:none;
+			border: none;
+			width: 200px;
+			/*transition: 1s;*/
+			transition-property: letter-spacing, font-size;
+			transition-duration:1s;
+			transition-delay:2s;
+			transition-timing-function: cubic-bezier(.07,.87,1,-0.53); /*ease, linear, ease-in, ease-out, ease-in-out, cubic-bezire-curve*/
+		}
+		button:hover{
+			background-color: rgba(125,240,125, 0.6);
+			letter-spacing: 15px;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		
+	</div>
+	<button> TEXT </button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#demo{
+			width: 250px;
+			height: 350px;
+			border: 2px solid;
+			margin: 100px auto;
+			perspective: 350px;
+			perspective-origin: 0% 0%;
+		}
+		#card{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transition: 1s;
+			transform-style: preserve-3d;
+			transform-origin: 0% 100%;
+		}
+		#sideA{
+			width: 100%;
+			background-color: lime;
+			text-align: center;
+			line-height: 350px;
+			position: absolute;
+			z-index: 11;
+			transform: rotateY(0deg);
+			backface-visibility: hidden;
+		}
+		#sideB{
+			width: 100%;
+			background-color: crimson;
+			text-align: center;
+			line-height: 350px;
+			position: absolute;
+			z-index: 1;
+			transform: rotateY(180deg);
+			backface-visibility: hidden;
+		}
+		#demo:hover #card{
+			transform: rotateY(-180deg);
+		}
+		#welcome{
+			width:250px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			text-align: center;
+			line-height: 350px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="demo">
+
+
+
+		<div id="welcome">
+			WELCOME 
+		</div>
+		<div id="card">
+			<div id="sideA">
+				SIDE A
+			</div>
+			<div id="sideB">
+				SIDE B
+			</div>
+		</div>
+	</div>
+</body>
+</html>
