@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#one{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			border-radius: 50%;
+			background-color: lime;
+			text-align: center;
+			line-height: 200px;
+
+			/* animation */
+			animation-name: demo;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			/*animation-delay: 2s;*/
+			animation-timing-function: linear;
+		}
+
+		#one:hover{
+			animation-play-state: paused;
+		}
+		@keyframes demo{
+			/*form{background-color: lime; margin-left: 10px; transform: rotate(0deg);}
+			to{ background-color: crimson ; margin-left: 500px; transform: rotate(3turn);}*/
+			10%{ margin-left:200px; margin-top:200px; transform: scale(1.5,1.5);  }
+			25%{margin-left:400px; margin-top:20px; transform: scale(1,1) rotate(3turn); background-color:crimson }
+			50%{margin-left:600px; margin-top:200px; transform: scale(1.5,1.5) rotate(3turn); background-color: yellow}
+			75%{margin-left:800px; margin-top:20px; transform: scale(1,1) rotate(3turn); background-color: lime;}
+			100%{margin-left:1000px; margin-top:200px; transform: scale(1.6,1.6) rotate(3turn); background-color: blue;}
+		}
+	</style>
+</head>
+<body>
+	<div id="one">
+		ABCD
+	</div>
+</body>
+</html>
