@@ -2,11 +2,23 @@
 <html>
 <head>
 	<title></title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<style type="text/css">
 		#one{
-			width: 500px;
+			/* currentEle/parentElementWidth * 100 */
+			width: 	37%; /* 500px */
 			height: 50px;
 			background-color: lime;
+			display: none;
+
+		}
+		@media screen and (max-width: 600px){
+			body{
+				background-color: blue;
+			}
+			#one{
+				display: block;
+			}
 		}
 	</style>
 </head>
