@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one" class="one">
+        <h1>ONE </h1>
+    </div>
+    <div id="two">
+        TWO
+    </div>
+    <div class="one" id="three" onclick="demoFn()">
+        THREE
+    </div>
+
+    <button id="btn"> Click Here </button>
+
+    <script>
+        // id, class, Element.
+        var One = document.getElementById('one'); // first Element;
+        var OneClass = document.getElementsByClassName('one')[1];
+        var Ele = document.getElementsByTagName('div')[1];
+        var btn = document.getElementById('btn');
+        // innerText, innerHTML,
+        // One.innerText = "Somthing New Text..."; // setter
+        One.innerHTML = "<h2> This is New Heading..</h2>"
+        // console.log( One.innerHTML );
+        
+        
+    function demoFn(){
+        alert();
+    }
+
+
+    // element.addEventListener('eventName', callBackFunction, true);
+
+
+    // btn.addEventListener('click', function demo(){
+    //     One.innerHTML = "<h1> Content Changed...</h1>"
+    // }, false);
+
+
+    btn.addEventListener('click', demo, true);
+
+
+    function demo(){
+        One.innerHTML = "<h1> Content Changed...</h1>";
+    }
+
+
+
+
+    </script>
+</body>
+</html>

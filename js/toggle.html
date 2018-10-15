@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #toggler{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: lime;
+            margin:100px auto;
+            box-shadow:0px 0px 5px 2px #000;
+        }
+        #btn{
+            padding: 5px;
+            background-color: lightskyblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="toggler">
+
+    </div>
+
+    <button id="btn">
+        Off
+    </button>
+
+    <script>
+        var toggler = document.getElementById('toggler');
+        var btn = document.getElementById('btn');
+        toggler.style.display = "block";
+
+        btn.onclick = function(){
+            // element.style.cssproperty = value;
+             
+             if(toggler.style.display == "block"){
+                toggler.style.display = "none";
+             }else{
+                toggler.style.display = "block";
+             }
+
+        }
+
+    </script>
+</body>
+</html>

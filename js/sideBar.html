@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            transition: 0.5s;
+        }
+        #menu{
+            position: fixed;
+            right: 25px;
+            top: 35px;
+            width: 75px;
+            padding: 5px;
+        }
+        #header{
+            width: 20%;
+            height: 100vh;
+            background-color: bisque;
+            text-align: center
+        }
+        #header h1{
+            padding-top: 100px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #fff;
+        }
+        #header ul{
+            margin-top: 25px;
+            list-style: none;
+        }
+        #header ul li{
+            text-align: center;
+            line-height:40px;
+            border-bottom: 1px  solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1> LOGO </h1>
+
+        <ul>
+            <li>
+                <a href="#"> HOME </a>
+            </li>
+            <li>
+                <a href="#"> ABOUT </a>
+            </li>
+            <li>
+                <a href="#"> GALLERY </a>
+            </li>
+            <li>
+                <a href="#"> CONTACT </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <button id="menu"> MENU </button>
+    <script>
+        var Menu = document.getElementById('menu');
+        var header = document.getElementById('header');
+        header.style.marginLeft = "0%";
+        Menu.onclick = function(){
+            if(header.style.marginLeft == "0%"){
+                header.style.marginLeft = "-20%";
+            }else{
+                header.style.marginLeft = "0%";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
