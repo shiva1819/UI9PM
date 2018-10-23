@@ -50,7 +50,7 @@
             </div>
             <button id="menubtn"> <i class="fas fa-bars"></i> </button>
         </div>
-        <div id="project" class="wi80">
+        <div id="project" class="wi100">
             <div id="dashData">
                 <div id="tabler" style="display:none;">
                     <table>
@@ -155,6 +155,7 @@
     <script>
         var menubtn = document.getElementById('menubtn');
         var navMenu = document.getElementById("leftnav");
+        var project = document.getElementById('project');
         // Click Tabs
         var dbtn =  document.getElementById('dbtn');
         // Dash Tab
@@ -178,10 +179,14 @@
         // Menu Navagation
         navMenu.style.marginLeft = "-20%";
         menubtn.onclick = function () {
+            project.removeAttribute('class');
+            
             if (navMenu.style.marginLeft == "-20%") {
                 navMenu.style.marginLeft = "0px";
+                project.className = "wi80";
             } else {
                 navMenu.style.marginLeft = "-20%";
+                project.className = "wi100";
             }
         }
 
