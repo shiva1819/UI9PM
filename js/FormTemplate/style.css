@@ -1,0 +1,182 @@
+/* 
+font-family: 'Ubuntu', sans-serif; // Regular Text
+font-family: 'Russo One', sans-serif; Bold Text
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Russo One';
+}
+body{
+    background: url(wall.jpg) no-repeat;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;    
+}
+
+#leftnav{
+    /* width: 250px; */
+    height: 100vh;
+    text-align: center;
+    background: rgba(32, 95, 144, 0.6);
+    box-shadow: 2px 0px 2px 1px #282e31; 
+    padding: 100px 0px;
+    margin-left: -250px;
+    float: left;
+}
+#logo{
+    text-shadow:5px 4px 4px #000;
+    font-size: 1.7rem;
+    color:#B6CC3D;
+    padding: 10px;
+}
+#menu{
+    padding: 100px 0px;
+}
+#menu ul{
+    margin-top: 50px;
+}
+#menu ul li:first-child{
+    border-top: 1px solid #fff;
+    position: relative;
+}
+#menu ul li{
+    line-height: 40px;
+    border-bottom: 1px solid #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;    
+    
+    
+}
+
+.linkText, .linkIcon{
+    float: left;
+}
+#menu ul li .linkText{
+    text-align: left
+}
+.linkText{
+    width: 75%;
+}
+.linkIcon{
+    width: 25%;
+    font-size: 1.2em;
+}
+#menu ul::after{
+    content:"";
+    display: block;
+    clear: both;
+ }
+#menubtn{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#project{
+    float: left;
+}
+.wi20{
+    width: 20%;
+}
+.wi80{
+    width: 80%;
+}
+#mainNav::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#dashData{
+    padding: 50px;
+    box-sizing:border-box;
+}
+
+#dashData{
+    width: 90%;
+    margin: auto;
+}
+#dashData table{
+    width: 100%;
+    text-align: center;
+}
+#dashData table, tr, td, th{
+    padding: 10px;
+    border-bottom:1px solid #fff;
+    border-collapse: collapse;
+}
+#regiter{
+    width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+#regiter h2{
+    padding: 15px;
+    text-align: center;
+    font-size:2rem;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 10px;
+}
+#formTemp{
+    padding: 25px;
+}
+.form-control{
+    margin-bottom: 10px;
+}
+.form-control .form-in{
+    width: 100%;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+}
+.form-control label{
+    font-size: 20px;
+}
+.form-control button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: none;
+    text-align: center;
+    line-height:40px; 
+    font-size: 20px;
+    color: #fff;
+}
+.btnWrap{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    position: relative;
+}
+#save{
+    background:#cddc39;
+    position: absolute;
+    right: 105px;
+}
+#reset{
+    background: #ffc107;
+    position: absolute;
+    right: 0px;
+}

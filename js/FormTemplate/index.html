@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Form Validations </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu:400,700&amp;subset=greek" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mainNav">
+        <div id="leftnav" class="wi20">
+            <div id="logo">
+                <h1 class="logo"> LOGO </h1>
+            </div>
+            <div id="menu">
+                <ul class="listMenu">
+                    <li id="dbtn">
+                        <p class="linkText">
+                            <a href="#"> Dashboard </a>
+                        </p>
+                        <p class="linkIcon">
+                            <i class="fas fa-grip-horizontal"></i>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="linkText">    <a href="#"> Login </a></p>
+                        <p class="linkIcon">
+                                <i class="fas fa-sign-in-alt"></i>
+                        </p>
+                    </li> -->
+                    <li id="rbtn">
+
+                        <p class="linkText"> <a href="#"> Register </a></p>
+                        <p class="linkIcon">
+                            <i class="fas fa-user-plus"></i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer">
+                <p class="copy">
+
+                </p>
+            </div>
+            <button id="menubtn"> <i class="fas fa-bars"></i> </button>
+        </div>
+        <div id="project" class="wi80">
+            <div id="dashData">
+                <div id="tabler" style="display:none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Sl.No
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Contact
+                                </th>
+                                <th>
+                                    Country
+                                </th>
+                                <th>
+                                    Gender
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="bindData">
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    Shiva
+                                </td>
+                                <td>
+                                    Shiva@gmail.com
+                                </td>
+                                <td>
+                                    9922992299
+                                </td>
+                                <td>
+                                    India
+                                </td>
+                                <td>
+                                    Male
+                                </td>
+
+                                <td>
+                                    <button> Edit </button>
+                                    <button> Delete </button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div id="regiter">
+                    <div>
+                        <h2> REGISTER </h2>
+                        <div id="formTemp">
+                            <div class="form-control">
+                                <label for="username"> Name </label>
+                                <input type="text" name="username" id="uname" class="form-in" placeholder="Name">
+                            </div>
+                            <div class="form-control">
+                                <label for="email"> Email </label>
+                                <input type="text" name="email" id="email" class="form-in" placeholder="Email">
+                            </div>
+                            <div class="form-control">
+                                <label for="contact"> Contact </label>
+                                <input type="text" name="contact" id="contact" class="form-in" placeholder="Contact">
+                            </div>
+                            <div class="form-control">
+                                <label for="country"> Country </label>
+                                <select name="country" id="country" class="form-in">
+                                    <option value="null"> -- Please Choose -- </option>
+                                    <option value="India"> Indian </option>
+                                    <option value="US"> US </option>
+                                    <option value="UK"> UK </option>
+                                    <option value="Canada"> Canada </option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <input type="radio" name="gender" id="male" value="male"><label for="male"> Male </label>
+                                <input type="radio" name="gender" id="female"><label for="female"> Female </label>
+                            </div>
+                            <div class="form-control">
+                                <div class="btnWrap">
+                                    <button type="button" id="save"> SAVE </button>
+                                    <button type="reset" id="reset"> RESET </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menubtn = document.getElementById('menubtn');
+        var navMenu = document.getElementById("leftnav");
+        // Click Tabs
+        var dbtn =  document.getElementById('dbtn');
+        // Dash Tab
+        var tabler = document.getElementById('tabler');
+
+        
+        var rbtn = document.getElementById('rbtn');
+        // Rgistertab
+        var regiter = document.getElementById('regiter');
+
+
+
+        // Save & Reset 
+         var Save = document.getElementById("save");
+         var Reset = document.getElementById("reset");
+
+
+
+
+
+        // Menu Navagation
+        navMenu.style.marginLeft = "-20%";
+        menubtn.onclick = function () {
+            if (navMenu.style.marginLeft == "-20%") {
+                navMenu.style.marginLeft = "0px";
+            } else {
+                navMenu.style.marginLeft = "-20%";
+            }
+        }
+
+
+
+        // Switching Tabs
+        
+        dbtn.addEventListener('click', function(){
+            tabler.style.display =  "block";
+            regiter.style.display = "none";
+        });
+        rbtn.addEventListener('click', function(){
+            regiter.style.display = "block";
+            tabler.style.display =  "none";
+
+        });
+
+
+        // Form Fields...
+        var uname = document.getElementById("uname");
+        var Email = document.getElementById('email');
+        var Contact = document.getElementById('contact');
+        var country = document.getElementById('country');
+        var gender = document.getElementById('male');
+
+
+
+        // ResetFormFields
+        Reset.addEventListener('click', function(){
+            // reset Individual Form Fields
+        });
+
+
+        Save.addEventListener('click', function(){
+            // capture data from Form Fields.
+            // formElem.value -- getInfo
+            // formElem.value = "Shiva" -- setInfo;
+
+            console.log(uname.value + "-" + Email.value + "-" + Contact.value + "-" + country.value + "-" +gender.value);
+            
+
+            // create Elements
+            // document.createElement('elementName');
+
+            var tr = document.createElement('tr');
+            console.log(tr);
+
+        });
+    </script>
+</body>
+
+</html>
