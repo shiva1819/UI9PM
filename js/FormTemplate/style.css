@@ -173,12 +173,12 @@ input[type="radio"]{
     text-align: center;
     position: relative;
 }
-#save{
+#save, #update{
     background:#cddc39;
     position: absolute;
     right: 105px;
 }
-#reset{
+#reset, #cancel{
     background: #ffc107;
     position: absolute;
     right: 0px;

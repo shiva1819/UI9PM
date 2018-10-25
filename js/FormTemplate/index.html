@@ -143,7 +143,9 @@
                             <div class="form-control">
                                 <div class="btnWrap">
                                     <button type="button" id="save"> SAVE </button>
-                                    <button type="reset" id="reset"> RESET </button>
+                                    <button type="button" id="reset"> RESET </button>
+                                    <button type="button" id="update"> UPDATE </button>
+                                    <button type="button" id="cancel"> CANCEL </button>
                                 </div>
                             </div>
                         </div>
@@ -171,6 +173,10 @@
         // Save & Reset 
          var Save = document.getElementById("save");
          var Reset = document.getElementById("reset");
+         var Update = document.getElementById('update');
+         Update.style.display = 'none';
+         var Cancel = document.getElementById('cancel');
+         Cancel.style.display = "none";
 
 
 
@@ -211,6 +217,7 @@
         var Contact = document.getElementById('contact');
         var country = document.getElementById('country');
         var gender = document.getElementById('male');
+        var Tbody = document.getElementById('bindData');
 
 
 
@@ -231,10 +238,103 @@
             // create Elements
             // document.createElement('elementName');
 
-            var tr = document.createElement('tr');
-            console.log(tr);
+            console.log(Tbody.children.length + 1);
 
+            var Tr = document.createElement('tr');
+
+            var SlNoTd = document.createElement('td');
+                SlNoTd.innerText = Tbody.children.length + 1;
+            
+            var NameTd = document.createElement('td');
+                NameTd.innerText = uname.value;
+
+            var EmailTd = document.createElement('td');
+                EmailTd.innerText =  Email.value;
+
+            var ContactTd = document.createElement('td');
+                ContactTd.innerText = Contact.value;
+
+            var CountryTd = document.createElement('td');
+                CountryTd.innerText = country.value;
+
+            var GenderTd = document.createElement('td');
+                GenderTd.innerText = gender.value;
+
+
+            var OptTd = document.createElement('td');
+                var editBtn = document.createElement('button');
+                editBtn.innerText = "Edit";
+                var delBtn = document.createElement('button');
+                delBtn.innerText = "Delete";
+
+                OptTd.appendChild(editBtn);
+                OptTd.appendChild(delBtn);
+
+            // console.log(OptTd);
+
+
+            // TCONTENT > TD > TR > TBODY
+
+            // parentEle.appendChild(childEle);
+
+
+            Tr.appendChild(SlNoTd);
+            Tr.appendChild(NameTd);
+            Tr.appendChild(EmailTd);
+            Tr.appendChild(ContactTd);
+            Tr.appendChild(CountryTd);
+            Tr.appendChild(GenderTd);
+            Tr.appendChild(OptTd);
+
+            console.log(Tr);
+
+            Tbody.appendChild(Tr);
+
+            tabler.style.display =  "block";
+            regiter.style.display = "none";
+
+
+            // uname.value = "";
+            // Email.value  = "";
+            // Contact.value = "";
+            // country.value = "";
+            // gender.value = "";
+
+            resetInfo(uname, Email, Contact, country, gender);
+
+
+            editBtn.addEventListener('click', function(){
+                tabler.style.display =  "none";
+                regiter.style.display = "block";
+                
+                uname.value = NameTd.innerText;
+                Email.value = EmailTd.innerText;
+                Contact.value = ContactTd.innerText;
+                country.value = CountryTd.innerText;
+                gender.value = GenderTd.innerText; 
+                
+                Save.style.display = "none";
+                Reset.style.display = "none";
+                Update.style.display = "inline";
+                Cancel.style.display = "inline";
+
+
+            });
         });
+
+
+        Reset.addEventListener('click',function(){
+            resetInfo(uname, Email, Contact, country, gender);
+        });
+
+        function resetInfo(a,b,c,d,e){
+            a.value = "";
+            b.value = "";
+            c.value = "";
+            d.value = "null";
+            e.checked = false;
+        }
+
     </script>
 </body>
 
