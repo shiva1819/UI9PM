@@ -80,7 +80,7 @@
                             </tr>
                         </thead>
                         <tbody id="bindData">
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     1
                                 </td>
@@ -104,7 +104,7 @@
                                     <button> Edit </button>
                                     <button> Delete </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
 
                     </table>
@@ -226,8 +226,18 @@
             // reset Individual Form Fields
         });
 
+        var NameRegEx = /^[a-zA-Z]{3,}$/g;
+
+            
 
         Save.addEventListener('click', function(){
+
+
+            if(!NameRegEx.test(uname.value)){
+                alert('Please enter your name...?');
+                return false;
+            }
+
             // capture data from Form Fields.
             // formElem.value -- getInfo
             // formElem.value = "Shiva" -- setInfo;
@@ -307,11 +317,20 @@
                 tabler.style.display =  "none";
                 regiter.style.display = "block";
                 
-                uname.value = NameTd.innerText;
-                Email.value = EmailTd.innerText;
-                Contact.value = ContactTd.innerText;
-                country.value = CountryTd.innerText;
-                gender.value = GenderTd.innerText; 
+                // this
+                // debugger
+                console.log(this);
+                var editName = this.parentNode.parentNode.children[1];
+                var editEmail = this.parentNode.parentNode.children[2];
+                var editContact = this.parentNode.parentNode.children[3];
+                var editCountry = this.parentNode.parentNode.children[4];
+                var editGender = this.parentNode.parentNode.children[5];
+
+                uname.value = editName.innerText;
+                Email.value = editEmail.innerText;
+                Contact.value = editContact.innerText;
+                country.value = editCountry.innerText;
+                gender.value = editGender.innerText; 
                 
                 Save.style.display = "none";
                 Reset.style.display = "none";
@@ -319,7 +338,38 @@
                 Cancel.style.display = "inline";
 
 
+            Update.onclick = function(){
+                debugger;
+                editName.innerText = uname.value;
+                editEmail.innerText = Email.value;
+                editContact.innerText = Contact.value;
+                editCountry.innerText = country.value;
+                editGender.innerText = gender.value; 
+                
+
+                tabler.style.display = "block";
+                regiter.style.display = "none";
+
+                resetInfo(uname, Email, Contact, country, gender);
+                
+                
+                Save.style.display = "inline";
+                Reset.style.display = "inline";
+                Update.style.display = "none";
+                Cancel.style.display = "none";
+
+                
+            };
             });
+
+            
+            delBtn.addEventListener('click', function(){
+                // appendChild,
+                // parentEle.removeChild(childEle),
+                var delTR = this.parentNode.parentNode;
+                Tbody.removeChild(delTR);
+            });
+
         });
 
 
