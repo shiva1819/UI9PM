@@ -120,7 +120,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="email"> Email </label>
-                                <input type="text" name="email" id="email" class="form-in" placeholder="Email">
+                                <input type="text" name="email" id="email" class="form-in" placeholder="ex: user123@gmail.com">
                             </div>
                             <div class="form-control">
                                 <label for="contact"> Contact </label>
@@ -137,8 +137,8 @@
                                 </select>
                             </div>
                             <div class="form-control">
-                                <input type="radio" name="gender" id="male" value="male"><label for="male"> Male </label>
-                                <input type="radio" name="gender" id="female"><label for="female"> Female </label>
+                                <input type="radio" name="gender" id="male" value="male" class="gen"><label for="male"> Male </label>
+                                <input type="radio" name="gender" id="female" class="gen"><label for="female"> Female </label>
                             </div>
                             <div class="form-control">
                                 <div class="btnWrap">
@@ -219,6 +219,11 @@
         var gender = document.getElementById('male');
         var Tbody = document.getElementById('bindData');
 
+        var genClass = document.getElementsByClassName('gen');
+
+        var genChecked = "";
+        
+
 
 
         // ResetFormFields
@@ -226,17 +231,38 @@
             // reset Individual Form Fields
         });
 
-        var NameRegEx = /^[a-zA-Z]{3,}$/g;
-
-            
 
         Save.addEventListener('click', function(){
+            
+        var NameRegEx = /^[a-zA-Z]{3,}$/g;
+        var EmailRegEx = /^[a-zA-Z]+[0-9]+@+[a-zA-Z]+\.([a-z\.]){0,6}?$/g;
+        var contactNum = /^[0-9]+$/g;
+            
 
-
+            for(var i = 0; i < genClass.length; i++){
+            if(genClass[i].checked == true){
+                genChecked = 1;
+            }
+        }
+            
             if(!NameRegEx.test(uname.value)){
                 alert('Please enter your name...?');
                 return false;
-            }
+            }else if(!EmailRegEx.test(Email.value)){
+                alert('Please enter your Email..');
+                return false;    
+            }else if(!contactNum.test(Contact.value)){
+                alert('Please enter contact number..');
+                return false;        
+            }else if(country.value == 'null'){
+                alert('Please choose a country');
+                return false;
+            }else if(genChecked != 1){
+                alert('please choose a gender..');
+                return false;
+            }else{
+
+            
 
             // capture data from Form Fields.
             // formElem.value -- getInfo
@@ -369,7 +395,7 @@
                 var delTR = this.parentNode.parentNode;
                 Tbody.removeChild(delTR);
             });
-
+        }
         });
 
 

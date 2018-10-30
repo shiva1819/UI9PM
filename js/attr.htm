@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #main{
+            width: 400px;
+            height: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .brdr-invalid{
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="main">
+            <p>asdasdbasdbasdbasb</p>
+        </div>
+        <button id="btn"> valid </button>
+        <script>
+        var btn = document.getElementById('btn');
+        var main = document.getElementById('main');
+        main.setAttribute('class', 'brdr-invalid');
+            btn.onclick = function(){
+            // ele.setAttribute('href', 'brdr-invalid')
+            
+            if(main.className == "brdr-invalid"){
+                main.removeAttribute('class', 'brdr-invalid');
+                
+            }else{
+                main.setAttribute('class', 'brdr-invalid');
+            }
+            
+            // main.id = "demo"
+            // main.src = ".src"
+            // main.href = "link"
+
+            }
+        </script>
+</body>
+</html>
