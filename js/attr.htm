@@ -42,6 +42,18 @@
             // main.href = "link"
 
             }
+
+
+
+            function demo(name){
+                this.name = name;
+            }
+
+            var test = new demo("Shiva");
+            
+
+            console.log(test instanceof demo);
+            console.log(demo.prototype.isPrototypeOf(test));
         </script>
 </body>
 </html>

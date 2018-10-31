@@ -5,16 +5,96 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var demo = function(name){
-			this.name = name;
+		// Hoisting - decalring var on top;
+
+
+		// closure;
+		function demo(a){
+			var abc = 10;
+
+			function test(){
+				console.log(abc + a); // 10;
+			}
+
+			test();
+
+		}
+		demo(10);
+
+
+		// Encapsulation;
+
+		var abcd = (function(){
+
+			var abc = {};
+				abc.fn = function(){
+					return 'some Funciton';
+				}
+				abc.def = "some Text";
+			return abc.fn();
+		});
+
+		console.log(abcd());
+		
+
+		// Constructor function.
+
+		// function person(){
+		// 	this.name = "Shiva";
+		// };
+
+		function person(name, age){
+			this.Name = name;
+			this.Age = age;
+			this.friends = ['test','test1'];
 		}
 
-		demo.prototype.fname = function(){
-			return this.name;
+		// prototype;
+		person.prototype.fullName = function(){
+			return "Hai i'm"+ this.Name + " and i am about " + this.Age + "yrs old";
 		}
 
-		var a = new demo('SHiva');
 
+		/*console.log(p2.Name +"-" + p2.Age);
+		console.log(p1.fullName()); */
+
+
+
+		// Call, Apply and Bind
+		var obj = {name:"Shiva"};
+
+		function getName(age){
+			return this.name+ "-" + age;
+		}
+		// console.log(getName.call(obj, 50));
+		// console.log(getName.apply(obj, [60]));
+		
+		var b1 = getName.bind(obj);
+		console.log(b1(70));
+
+
+		// Inheritance
+
+		function employee(name,age, salary){
+			person.call(this, name, age);
+			this.salary = salary;
+		}
+
+		employee.prototype = new person();
+
+		var p1 = new person('Shiva', 30);
+		var p2 = new person('Prasad', 40);
+		p1.friends.push('test2');
+		var e1 = new employee('ravi', 28, 10000);
+
+		console.log(e1.Name);
+
+		console.log(p1);
+
+		// isprototypeOf()
+		person.prototype.isPrototypeOf(p1);// true;
+		// instanceof
+		p1 instanceof person; // true;
 	</script>
 </body>
 </html>
