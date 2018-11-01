@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <article>
+            <form action="">
+                <input type="email" required> <br>
+                <input type="number" disabled value="90521781555"> <br>
+                <input type="color" > <br>
+                 0 <input type="range" step="1" min="10" max="200" id="clr"> 20 <br>
+                <input type="file"> <br>
+                <input type="date"> <br>
+                <input type="search"> <br>
+                <button> signin </button>
+            </form>
+        </article>
+
+        <div id="demo" style="border:1px solid red; width: 10px;">
+            test
+        </div>
+        <script>
+            var clr = document.getElementById('clr');
+            var demo = document.getElementById('demo');
+
+            clr.onchange = function(){
+                console.log(this.value);
+                demo.style.width = this.value + "px";
+            }
+        </script>
+</body>
+</html>    
