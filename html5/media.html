@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+		}
+		#demo{
+			position: absolute;
+			left: 35%;
+			bottom: 10%;
+		}
+		#vid{
+			width: 100%;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+
+		}
+		#baner{
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(125,125,125,0.9);
+			position: absolute;
+			z-index: 111;
+			top: 0px;
+			left: 0px;
+		}
+		#baner h1{
+			text-align: center;
+			line-height: 100vh;
+			font-size: 60px;
+			color: #fff;
+		}
+	</style>
+</head>	
+<body>	
+	<audio controls id="demo" autoplay loop muted>
+		<source src="aud.mp3" type="audio/mp3">
+	</audio>
+	<audio src="aud.mp3" id="demo1"></audio>
+
+
+	<article id="baner">
+		<h1> THIS IS BANNER </h1>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5YYzNeJPuKE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	</article>
+
+	<video id="vid" autoplay loop muted>
+		<source src="vid.mp4" type="video/mp4">
+	</video>
+
+
+	<button id="play"> Play </button>
+	<script type="text/javascript">
+		var demo = document.getElementById('vid');
+		var play = document.getElementById('play');
+			
+			
+			play.onclick = function(){
+				demo.paused;
+				if(demo.paused == true){
+					demo.play();
+					this.innerText = "Pause";
+				}else{
+					demo.pause();
+					this.innerText = "Play";
+				}
+			}
+			
+
+
+	</script>
+</body>
+</html>
